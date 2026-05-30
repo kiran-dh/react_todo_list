@@ -1,0 +1,58 @@
+nav {
+  width: 100%;
+  max-width: 700px;
+
+  margin: auto auto 30px auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo-box img {
+  width: 42px;
+}
+
+.logo-box h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.theme-btn {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+  border: none;
+
+  cursor: pointer;
+
+  background: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+
+  transition: 0.2s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg);
+}
+
+.theme-btn img {
+  width: 24px;
+}
+
+.app.dark .theme-btn {
+  background: #374151;
+}

@@ -1,0 +1,71 @@
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input {
+  font-size: 40px;
+  flex: 1;
+}
+
+button {
+  cursor: pointer;
+}
+form {
+  width: 100%;
+  max-width: 700px;
+
+  margin: auto;
+
+  display: flex;
+  gap: 14px;
+}
+
+form input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  padding: 18px 20px;
+
+  border-radius: 18px;
+
+  font-size: 18px;
+
+  background: white;
+
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.app.dark form input {
+  background: #1f2937;
+  color: white;
+}
+
+form input::placeholder {
+  font-size: 18px;
+  color: #9ca3af;
+}
+
+form button {
+  width: 60px;
+  border: none;
+
+  border-radius: 18px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 28px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+form button:hover {
+  transform: scale(1.05);
+}
