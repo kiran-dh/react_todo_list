@@ -5,14 +5,14 @@ function TodoForm({addTodos}) {
 
     const [text,setText]= useState("")
 
-    function handelSubmit(e){
+    function handleSubmit(e){
         e.preventDefault();
         addTodos(text);
         setText("");
     }
      
     return (
-        <form onSubmit={handelSubmit}>
+        <form onSubmit={handleSubmit}>
         <input
             type="text"
             value={text}

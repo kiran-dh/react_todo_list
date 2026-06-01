@@ -1,7 +1,8 @@
 import "./App.css";
 import { useState,useEffect } from "react";
-import NavBar from "./components/navBar";
-import TodoForm from "./components/todoForm";
+import NavBar from "./components/navBar/navBar";
+import TodoForm from "./components/todoForm/todoForm";
+import TodoList from "./components/todoList/todoList";
 
 export default function App(){
 
@@ -57,42 +58,12 @@ const addTodos = (text) => {
 
       <TodoForm addTodos={addTodos} />
 
-      <div>
-        {todos.length === 0 && (
-          <p className="empty-text">No tasks yet 🚀</p>
-        )}
+      <TodoList
+        todos={todos}
+        toggleTodo={toggleTodo}
+        setTodos={setTodos}
+      />
 
-        {todos.map((todo) => (
-          <div key={todo.id} className="todo-item">
-            <div className="todo-left">
-              <input
-                className="check"
-                type="checkbox"
-                onChange={() => toggleTodo(todo.id)}
-              />
-
-              <span
-                className={`todo-text ${
-                  todo.completed ? "completed" : ""
-                }`}
-              >
-                {todo.text}
-              </span>
-            </div>
-
-            <button
-              className="delete-btn"
-              onClick={() =>
-                setTodos(
-                  todos.filter((t) => t.id !== todo.id)
-                )
-              }
-            >
-              Delete
-            </button>
-          </div>
-        ))}
-      </div>
     </div>
   </div>
 );

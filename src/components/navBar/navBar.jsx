@@ -1,4 +1,4 @@
-import { darkImg, lightImg, todoLogo } from "../assets/image.js";
+import { darkImg, lightImg, todoLogo } from "../../assets/image.js";
 import "./navBar.css"
 
 function NavBar({ darkMode, toggleTheme }) {
